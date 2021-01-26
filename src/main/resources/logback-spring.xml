@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
-    <springProperty scope="context" name="APP_NAME" source="spring.application.name" defaultValue="defaultAppName"/>
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name" defaultValue="jenkins"/>
 
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径 -->
     <property name="LOG_HOME" value="/var/jenkins_home/logs/${APP_NAME}"/>
