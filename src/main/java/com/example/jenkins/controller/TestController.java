@@ -12,10 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021/1/18 15:55
  */
 @RestController
-@RequestMapping("test")
+@RequestMapping
 public class TestController {
 
-    @RequestMapping
+    @RequestMapping("/")
+    public String index(){
+        return "jenkins start success";
+    }
+
+    @RequestMapping("/test")
     public String test(){
         return "jenkins test";
     }
