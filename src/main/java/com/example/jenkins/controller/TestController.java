@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class TestController {
 
-    @RequestMapping
-    public String index(){
-        return "jenkins start success";
-    }
+
 
     @RequestMapping("/test")
     public String test(){
