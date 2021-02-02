@@ -18,14 +18,27 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @RequestMapping
-    public String index(){
-        log.info("jenkins start success");
+    public String index() {
+        log.info("jenkins start success {}", this.getClass());
         return "jenkins start success";
     }
 
     @RequestMapping("/test")
-    public String test(){
+    public String test() {
         log.info("jenkins test");
         return "jenkins test";
+    }
+
+    @RequestMapping("/obj")
+    public String obj(String object) {
+        try {
+            System.out.println(object);
+            System.out.println(object.equals("test"));
+        } catch (Exception e) {
+            for (int i = 0; i < 50; i++) {
+                log.error("jenkins test error", e);
+            }
+        }
+        return "jenkins test error";
     }
 }

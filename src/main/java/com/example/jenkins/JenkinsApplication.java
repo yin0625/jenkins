@@ -11,9 +11,4 @@ public class JenkinsApplication {
 		SpringApplication.run(JenkinsApplication.class, args);
 	}
 
-	@RequestMapping
-	public String index(){
-		return "jenkins start success";
-	}
-
 }
