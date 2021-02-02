@@ -35,9 +35,7 @@ public class TestController {
             System.out.println(object);
             System.out.println(object.equals("test"));
         } catch (Exception e) {
-            for (int i = 0; i < 50; i++) {
-                log.error("jenkins test error", e);
-            }
+            log.error("jenkins test error", e);
         }
         return "jenkins test error";
     }
